@@ -1,8 +1,6 @@
 
 package basicoperations;
 
-import static java.lang.Character.UnicodeBlock.of;
-
 public class BasicOperations {
 
     public static void main(String[] args) {
