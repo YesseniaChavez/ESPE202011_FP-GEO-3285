@@ -7,7 +7,11 @@ public class WS05Iterations {
     public static void main(String[] args) {
        
       int i;
-      i = 0;
+      i = 0; //variable
+      final float pi = 3.14f; //constant
+        System.out.println("pt ->" + pi);
+        float radio=1;
+        float area=pi * radio * radio;
       
       System.out.println("=== This is a while loop from i to 10 ===");
       
@@ -42,6 +46,36 @@ public class WS05Iterations {
             System.out.println("7 * " + j + " = " + product);
             
         }
+        System.out.println(" pi ->" + pi);
+        int number = 9;
+        float realNumber = 0.0F;
+        
+        //7.7 float
+        // 7 -> int or float
+        
+        realNumber = number;//casting corvension de datos de int a float
+        System.out.println(" integer -> number" + number);
+        System.out.println(" float -> realNumber" + realNumber);
+        
+        realNumber = 6.7F;
+        number = (int) realNumber
+                
+        System.out.println(" integer number -->" + number);
+        System.out.println(" float --> realNumber" + number);
+                
+                number = (int) Math.round(realNumber);
+                
+        System.out.println(" integer number -->" + number);
+        System.out.println(" float --> realNumber" + number);
+                
+        /*
+       
+        
+       System.out.println(" realNumber" + realNumber);
+       System.out.println(" number ->" + number);
+        
+        
+        */
     }
     
 }
