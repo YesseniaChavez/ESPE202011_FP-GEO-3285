@@ -58,7 +58,7 @@ public class WS05Iterations {
         System.out.println(" float -> realNumber" + realNumber);
         
         realNumber = 6.7F;
-        number = (int) realNumber
+        number = (int) realNumber;
                 
         System.out.println(" integer number -->" + number);
         System.out.println(" float --> realNumber" + number);
