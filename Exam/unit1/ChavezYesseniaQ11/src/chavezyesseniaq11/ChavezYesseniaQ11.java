@@ -13,8 +13,8 @@ public class ChavezYesseniaQ11 {
 
         do {
           System.out.println(" ========= Calculator =======");
-          System.out.println("0. -> Exit");
           System.out.println("1. -> table");
+          System.out.println("2. -> Exit");
       
             System.out.println("Enter your menu option --> ");
             option = input.nextInt();
@@ -34,7 +34,7 @@ public class ChavezYesseniaQ11 {
             }
              break;
              
-            case 0:
+            case 2:
    
                     System.out.println("Good Bye my friend");
                     System.exit(0);
