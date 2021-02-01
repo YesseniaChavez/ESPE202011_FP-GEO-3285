@@ -30,8 +30,7 @@ public class HW08FactorialNumber {
                             factorial = factorial * n;
                         }
                         System.out.println("The factorial of " + number + " is " + factorial);
-                    }
-                    else {
+                    } else {
                         System.out.println("The factorial of " + number + " it was not found ");
                     }
                     break;
@@ -43,8 +42,9 @@ public class HW08FactorialNumber {
                     System.out.println("Invalid option ");
                     break;
             }
-            
+
         } while (option < 3);
-    
+
     }
 }
+
