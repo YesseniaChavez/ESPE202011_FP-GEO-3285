@@ -1,8 +1,8 @@
-package hw10.functions;
+package ws11functionsandrecursion;
 
 import java.util.Scanner;
 
-public class HW10Functions {
+public class WS11FunctionsAndRecursion {
 
     public static void main(String[] args) {
         System.out.println("======================================");
@@ -17,21 +17,21 @@ public class HW10Functions {
         int dividend = imput.nextInt();
         System.out.printf("Enter a number of divisor --> ");
         int divisor = imput.nextInt();
-        float quotient = sectionIntegerNumber(dividend, divisor);
+        float quotient = showSectionIntegerNumber(dividend, divisor);
         System.out.println("The quotient of " + dividend + "/" + divisor + " your number is ---> " + quotient);
 
 ///POWER
         System.out.println("======== Square of a number =======");
         System.out.println("Enter a number --> ");
         int number = imput.nextInt();
-        int totalpower = powerANumber(number);
+        int totalpower = showPowerANumber(number);
         System.out.println("The Power of " + number + " is --> " + totalpower);
 
 //QuadraticEquation
         System.out.println("======== Square Coeffient of a number =======");
         System.out.printf("Enter a number of SquareCoefficient --> ");
         int SquareCoefficient = imput.nextInt();
-        float QuadraticEquation = solveTheQuadraticEquation(SquareCoefficient);
+        float QuadraticEquation = showTheQuadraticEquation(SquareCoefficient);
         System.out.println("The quotient of " + SquareCoefficient + " * " + SquareCoefficient + " + " + 2 + " * " + SquareCoefficient + " + " + 1 + " your number is ---> " + QuadraticEquation);
 
         //multiplicationTable
@@ -39,37 +39,39 @@ public class HW10Functions {
         System.out.printf("Enter a number of  --> ");
         int multiplicand = imput.nextInt();
         int stop = 12;
-        for (int multiplier = 1; multiplier<= stop; multiplier+=1){
-        int result = showThemultiplicationTable(multiplicand, multiplier);
-        System.out.println( multiplicand + " * " + multiplier + " = " + result);
-        
-    }
-        
+        for (int multiplier = 1; multiplier <= stop; multiplier += 1) {
+            int result = showThemultiplicationTable(multiplicand, multiplier);
+            System.out.println(multiplicand + " * " + multiplier + " = " + result);
+
+        }
+
     }
 
-    public static float sectionIntegerNumber(int dividend, int divisor) {
+    private static float showSectionIntegerNumber(int dividend, int divisor) {
         float quotient = 0.00F;
         quotient = (float) dividend / (float) divisor;
         return quotient;
     }
 
-    public static int powerANumber(int number) {
+    private static int showPowerANumber(int number) {
         int totalpower;
         totalpower = number * number;
         return totalpower;
 
     }
 
-    public static int solveTheQuadraticEquation(int SquareCoefficient) {
+    private static int showTheQuadraticEquation(int SquareCoefficient) {
         int QuadraticEquation;
         QuadraticEquation = SquareCoefficient * SquareCoefficient + 2 * SquareCoefficient + 1;
         return QuadraticEquation;
 
     }
-    public static int showThemultiplicationTable(int multiplicand, int multiplier){
+
+    private static int showThemultiplicationTable(int multiplicand, int multiplier) {
         int result;
         result = multiplicand * multiplier;
         return result;
     }
 }
+
 

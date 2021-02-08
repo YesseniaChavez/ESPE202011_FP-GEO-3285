@@ -1,11 +1,24 @@
-package hw09.embeddedstructures;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ws11functionsandrecursion;
 
 import java.util.Scanner;
 
-public class HW09EmbeddedStructures {
+/**
+ *
+ * @author Yessi
+ */
+public class W11FunctionsAndRecursion {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        int opperator_1;
+        // TODO code application logic here
+         int opperator_1;
         int opperator_2;
         int sum;
         int product;
@@ -93,3 +106,4 @@ public class HW09EmbeddedStructures {
 
     }
 }
+
