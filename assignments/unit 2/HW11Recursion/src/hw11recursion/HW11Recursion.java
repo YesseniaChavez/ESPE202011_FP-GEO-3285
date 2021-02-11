@@ -24,7 +24,7 @@ public class HW11Recursion {
         
         }else{
             if (num == 0){
-                return 1;
+                return 0;
             }else{
                 return ( num * factorialSequenceNumber(num - 1));
             }
