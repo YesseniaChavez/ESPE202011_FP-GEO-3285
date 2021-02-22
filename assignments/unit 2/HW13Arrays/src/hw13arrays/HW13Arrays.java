@@ -33,7 +33,7 @@ public class HW13Arrays {
 
         }
         for (int i = 0; i < n; i++) {
-            System.out.println("number of people per family" + (i + 1) + "->" + numberOfPeopleperFamilies[i]);
+            System.out.println("number of people per family " + (i + 1) + "->" + numberOfPeopleperFamilies[i]);
         }
         for (String Surnames : mostCommonSurnames) {
             System.out.println("Common Surnames -> " + Surnames);

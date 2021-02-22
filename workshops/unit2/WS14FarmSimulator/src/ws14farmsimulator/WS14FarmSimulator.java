@@ -45,7 +45,7 @@ public class WS14FarmSimulator {
             
         }
         for (int i = 0;i<n; i++ ){
-            System.out.println("eggs of the coop" + (i + 1)+ "->" + eggsByCoop[i]);
+            System.out.println("eggs of the coop " + (i + 1)+ "->" + eggsByCoop[i]);
         }
         for (String chicken : chickens) {
             System.out.println("chicken name -> " + chicken);
