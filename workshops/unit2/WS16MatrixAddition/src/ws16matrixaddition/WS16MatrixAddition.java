@@ -27,7 +27,7 @@ public class WS16MatrixAddition {
             }
         }
 
-        System.out.println("\nAnd Matrix B -> ");
+        System.out.println("Matrix B -> ");
         for (int i = 0; i < 3; i++) {
             System.out.println("");
             for (int j = 0; j < 3; j++) {
@@ -35,7 +35,7 @@ public class WS16MatrixAddition {
             }
         }
 
-        System.out.println("\nequals to -> ");
+        System.out.println("Matrix -> ");
         for (int i = 0; i < 3; i++) {
             System.out.println("");
             for (int j = 0; j < 3; j++) {
