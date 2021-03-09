@@ -3,6 +3,9 @@ package ws10functions;
 public class WS10Functions {
 
     public static void main(String[] args) {
+        System.out.println("+----------------------------------------+");
+        System.out.println("| AUTHOR: YESSENIA LIZBETH CHAVEZ DEMERA |");
+        System.out.println("+----------------------------------------+");
         //call to divideTwoNumbers
         int divd = 5;
         int divr = 10;
