@@ -1,0 +1,8 @@
+
+Burbuja, white, 8, 12.67, Poddle toy
+Bruno, black, 2, 10.67, Dachsund
+Firulais, coffee, 4, 28.56, Chow Chow
+Copito, white, 2, 4.0, Bichón frisé
+Lukas, gray, 5, 12.3, Bulldog 
+Geronimo, blond, 6, 30.3, Labrador 
+Julian, black, 3, 21.6, Pastor aleman
