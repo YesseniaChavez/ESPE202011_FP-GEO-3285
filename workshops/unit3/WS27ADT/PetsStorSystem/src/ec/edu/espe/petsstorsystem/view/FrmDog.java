@@ -8,6 +8,7 @@ package ec.edu.espe.petsstorsystem.view;
 import ec.edu.espe.petsstorsystem.controller.DogController;
 import ec.edu.espe.petsstorsystem.model.Dog;
 import javax.swing.JOptionPane;
+import utils.FileManager;
 
 /**
  *
@@ -20,6 +21,12 @@ public class FrmDog extends javax.swing.JFrame {
      */
     public FrmDog() {
         initComponents();
+        DogController dogController = new DogController();
+        String[] lines = new String[FileManager.countLines("dogs")];
+        Dog[] dogs = new Dog[FileManager.countLines("dogs")];
+        
+        dogController.read(lines, dogs);
+        
     }
 
     /**
@@ -187,7 +194,14 @@ public class FrmDog extends javax.swing.JFrame {
 
     private void btnShowDogsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowDogsActionPerformed
         DogController dogController = new DogController();
-        txtAreaDogs.setText(DogController.read());
+         String[] lines = new String[FileManager.countLines("dogs")];
+        Dog[] dogs = new Dog[FileManager.countLines("dogs")];
+
+        dogController.read(lines, dogs);
+
+        for (Dog dog : dogs) {
+            txtAreaDogs.setText(txtAreaDogs.getText() + "\n" + dog.getName());
+        }
     }//GEN-LAST:event_btnShowDogsActionPerformed
 
     /**

@@ -20,11 +20,10 @@ import java.util.logging.Logger;
  * @author Yessi
  */
 public class FileManager {
-
     public static boolean createFile(String fileName) {
         boolean created = false;
         try {
-            File file = new File(fileName + ".txt");
+            File file = new File(fileName + ".csv");
             if (file.createNewFile()) {
                 System.out.println("file was created");
 
@@ -40,28 +39,6 @@ public class FileManager {
         }
         return created;
 
-    }
-
-    public static int countLines(String fileName) {
-        BufferedReader br = null;
-        int numberOfLines = 0;
-        try {
-
-            File file = new File(fileName + ".csv");
-            br = new BufferedReader(new FileReader(file));
-            try {
-                while ((br.readLine()) != null) {
-                    numberOfLines++;
-                }
-                br.close();
-            } catch (IOException ex) {
-                Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            return numberOfLines;
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return numberOfLines;
     }
 
     public static boolean save(String data, String fileName) {
@@ -83,29 +60,33 @@ public class FileManager {
         return saved;
     }
 
-    public static String[] read(String fileName) {
+    public static int countLines(String fileName) {
+        BufferedReader br = null;
         int numberOfLines = 0;
-        String[] results = null;
-        int counter = 0;
-
         try {
-            Scanner s = new Scanner(new File(fileName));
-            while (s.hasNextLine()) {
-                numberOfLines++;
 
+            File file = new File(fileName + ".csv");
+            br = new BufferedReader(new FileReader(file));
+            try {
+                while ((br.readLine()) != null) {
+                    numberOfLines++;
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
             }
-            results = new String[numberOfLines];
-            while (s.hasNextLine()) {
-                numberOfLines++;
-                results[counter] = s.nextLine() + "\n";
+            return numberOfLines;
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("file not found");
         }
-
-        return results;
+        return numberOfLines;
     }
-
+    
     public static void readLines(String fileName, String[] results) {
         int counter = 0;
         try {
@@ -122,3 +103,4 @@ public class FileManager {
         }
     }
 }
+
